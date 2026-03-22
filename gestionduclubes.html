@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <style>
+            table{
+                border-collapse: collapse;
+            }
+            th,td {
+                border: 1px solid black ;
+                padding: 8px ;
+                text-align: center;
+            }
+             
+            body{
+                background-color: bisque;
+            }
+        
+        </style>
+         </head>
+    <body>
+    <h1 align = "center"> GESTION DES CLUBS</h1>
+    <h2> Ajouter un club</h2>
+   <div> <label>Nom du club :</label>
+        <input type="text" placeholder="Saisir le nom"></div>
+   <div> <label> Responsable : </label>
+    <input type = "text"placeholder="Saisir le nom de responsable "></div>
+    <div> <label> Nombre des membres : </label>
+    <input type = "text" placeholder="Saisir le nombre des membres"></div>
+    <button type="button" class="btn btn-primary">Ajouter</button>
+    <h2> Liste des clubs</h2>
+    <table border="4">
+        <tr> <th> ID</th><th> Nom du club</th><th>Responsable</th><th>Nombre des membres</th></tr>
+        <tr> <td> 1</td><td> Club informatique</td><td> Ali</td> <td> 25</td></tr>
+        <tr> <td> 2</td><td> Clib Robotique</td><td> Sara</td><td> 18</td></tr>
+    </table>
+    
+    </body>
+</html>
