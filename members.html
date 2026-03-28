@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Membres</title>
+    <link rel="stylesheet" href="style-members.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gestion des Membres des Clubs</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="add-member-form">
+            <h2>Ajouter un membre</h2>
+            <form id="memberForm">
+                <input type="text" id="nom" placeholder="Nom" required>
+                <input type="text" id="prenom" placeholder="Prénom" required>
+                <input type="text" id="numero" placeholder="Numéro" required>
+                <input type="text" id="CNI" placeholder="CNIE" required>
+                <select id="club" required>
+                    <option value="" disabled selected hidden>Club désiré</option> 
+                    <option value="eteam">Club E-team</option>
+                    <option value="ai">Club AI</option>
+                    <option value="agora">Club Agora</option>
+                    <option value="economie">Club Économie</option>
+                    <option value="astronomie">Club Astronomie</option>
+                    <option value="enactus">Club Enactus</option>
+                </select>
+                <input type="email" id="email" placeholder="Email" required>
+                <button type="submit">Ajouter</button>
+            </form>
+        </div>
+                 <div class="members-list">
+            <h2>Liste des demandes d'intégration :</h2>
+            <ul id="membersUl">
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        const form = document.getElementById('memberForm');
+        const membersUl = document.getElementById('membersUl');
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault(); 
+
+            const nom = document.getElementById('nom').value;
+            const prenom = document.getElementById('prenom').value;
+            const numero = document.getElementById('numero').value;
+            const CNI = document.getElementById('CNI').value;
+            const club = document.getElementById('club').value;
+            const email = document.getElementById('email').value;
+
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${nom} ${prenom}</strong> | Num: ${numero} | CNIE: ${CNI} | Club: ${club} | Email: ${email}`;
+
+            membersUl.appendChild(li);
+
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>
